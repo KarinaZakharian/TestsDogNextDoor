@@ -11,6 +11,10 @@
 		"lint:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix"
 	},
 	"dependencies": {
+		"@coreui/coreui": "^5.0.0-alpha.2",
+		"@coreui/react": "^5.0.0-alpha.0",
+		"@fortawesome/fontawesome-svg-core": "^6.4.2",
+		"@fortawesome/free-solid-svg-icons": "^6.4.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

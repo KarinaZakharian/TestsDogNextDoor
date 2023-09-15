@@ -1,0 +1,162 @@
+@use '../../styles/reset';
+@use '../../styles/variables' as v;
+.form {
+  background-color: v.$color-main;
+  border-radius: 4px;
+  width: 720px;
+  margin: 0 auto;
+  color: v.$color-text;
+  font-weight: 700;
+  font-size: 14px;
+}
+.form__animals {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+  background-color: v.$color-border;
+}
+.form__legend {
+  color: v.$color-text-dark;
+  font-weight: 700;
+  font-size: 15px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  display: flex;
+  color: v.$color-text-dark;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.checkbox-container input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-container label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+
+  border: 0.05em solid black;
+}
+
+.checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+  background-color: v.$color-text;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label,
+.checkbox-container input[type='checkbox']:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background-color: v.$color-hower;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label::before {
+  background-color: #ccc;
+  border-color: #999;
+}
+
+.form__radio-input {
+  -webkit-appearance: none;
+}
+.form__fieldset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form__radio-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+  border: 2px solid v.$color-border;
+  margin: auto;
+  border-radius: 10px;
+  color: v.$color-text;
+  transition: 0.5s;
+}
+.form__icon {
+  width: 50px;
+  height: 50px;
+}
+.form__radio-label > span {
+  font-size: 20px;
+  font-weight: 400;
+}
+.form__radio-input:checked + .form__radio-label {
+  border: 2px solid v.$color-hower;
+  box-shadow: 0 10px 20px v.$color-text-dark;
+  color: v.$color-text-dark;
+}
+.form__input {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+}
+.form__label {
+  font-weight: 700;
+  font-size: 15px;
+  color: v.$color-text-dark;
+  padding: 10px;
+}
+.form__input-field {
+  width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+  border: 2px solid v.$color-border;
+  border-radius: 10px;
+}
+.form__input-field:focus {
+  border-color: v.$color-text-dark;
+  outline: none;
+}
+.input-holder {
+  display: flex;
+  flex-direction: row;
+}
+.form__input-field::-webkit-calendar-picker-indicator {
+  background-color: v.$color-border;
+  padding: 5px;
+  cursor: pointer;
+}
+.small {
+  width: 150px;
+  height: 70px;
+}
+.form__submit-button {
+  display: block;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid v.$color-hower;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: v.$color-text-dark;
+  background-color: v.$color-main;
+  box-shadow: 0 10px 20px v.$color-text-dark;
+}
