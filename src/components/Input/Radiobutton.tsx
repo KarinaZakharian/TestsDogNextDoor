@@ -6,7 +6,7 @@ import './TestRadio.scss';
 
 interface FieldProps {
   name: string;
-  id: number | string;
+  id: string | undefined;
   value: string;
 }
 
